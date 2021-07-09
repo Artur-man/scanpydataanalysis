@@ -1,0 +1,7 @@
+# You can use this file to create a conda environment for this pipeline:
+# conda env create -f environment.yml
+name: scanpy-dataanalysis
+channels:
+   - conda-forge
+   - bioconda
+   - defaults
