@@ -1,9 +1,9 @@
 FROM ubuntu:16.04
-LABEL author="artur.manukyan@umassmed.edu" description="Docker image containing all requirements for the dolphinnext/kb pipeline"
+LABEL author="artur.manukyan@umassmed.edu" description="Docker image containing all requirements for scanpy analysis image"
 
 # env
-ENV PATH="/root/miniconda3/bin:${PATH}"
-ARG PATH="/root/miniconda3/bin:${PATH}"
+ENV PATH="/miniconda3/bin:${PATH}"
+ARG PATH="/miniconda3/bin:${PATH}"
 
 # update
 RUN apt-get -y update 
@@ -18,8 +18,8 @@ RUN apt-get install -y git
 # set conda
 RUN wget \
     https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
-    && mkdir /root/.conda \
-    && bash Miniconda3-latest-Linux-x86_64.sh -b \
+    && mkdir /.conda \
+    && bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda3 \
     && rm -f Miniconda3-latest-Linux-x86_64.sh 
 COPY environment.yml /
 RUN conda env create -f /environment.yml && conda clean -a
