@@ -43,6 +43,6 @@ RUN apt-get -y install texlive-base texlive-latex-base texlive-fonts-recommended
 RUN apt-get -y install libfontconfig1-dev libcairo2-dev
 
 # Install scanpy
-RUN pip3 install scanpy==1.8.0
+RUN pip3 install scanpy==1.8.1
 
 RUN pip3 install --use-feature=2020-resolver git+https://github.com/theislab/scib.git
