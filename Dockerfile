@@ -42,7 +42,7 @@ RUN apt-get -y install pandoc
 RUN apt-get -y install texlive-base texlive-latex-base texlive-fonts-recommended
 RUN apt-get -y install libfontconfig1-dev libcairo2-dev
 
-# Install scanpy
+# Install scanpy and leidenalg
 RUN pip3 install scanpy==1.8.1
-
+RUN pip3 install leidenalg
 RUN pip3 install --use-feature=2020-resolver git+https://github.com/theislab/scib.git
