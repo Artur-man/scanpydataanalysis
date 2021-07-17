@@ -46,3 +46,4 @@ RUN apt-get -y install libfontconfig1-dev libcairo2-dev
 RUN pip3 install scanpy==1.8.1
 RUN pip3 install leidenalg
 RUN pip3 install --use-feature=2020-resolver git+https://github.com/theislab/scib.git
+RUN pip3 install bbknn
