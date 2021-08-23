@@ -45,7 +45,7 @@ RUN apt-get -y install libfontconfig1-dev libcairo2-dev
 # Install scanpy and leidenalg
 RUN pip3 install scanpy==1.8.1
 RUN pip3 install leidenalg # download Leiden Algorithm
-RUN pip3 install --use-feature=2020-resolver git+https://github.com/theislab/scib.git
+# RUN pip3 install --use-feature=2020-resolver git+https://github.com/theislab/scib.git
 
 # Download Additional batch correction algorithm modules
 # RUN pip3 install bbknn # download BBKNN
