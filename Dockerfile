@@ -23,6 +23,7 @@ RUN wget \
     && rm -f Miniconda3-latest-Linux-x86_64.sh 
 COPY environment.yml /
 RUN conda env create -f /environment.yml && conda clean -a
+RUN conda install python=3.8.8
 
 # conda install r-base
 # RUN conda install r-base 
@@ -43,12 +44,12 @@ RUN apt-get -y install texlive-base texlive-latex-base texlive-fonts-recommended
 RUN apt-get -y install libfontconfig1-dev libcairo2-dev
 
 # Install scanpy and leidenalg
-RUN pip3 install scanpy==1.8.1
-RUN pip3 install leidenalg # download Leiden Algorithm
+RUN python3.8 -m pip install scanpy==1.8.1
+RUN python3.8 -m pip install leidenalg # download Leiden Algorithm
 # RUN pip3 install --use-feature=2020-resolver git+https://github.com/theislab/scib.git
 
 # Download Additional batch correction algorithm modules
-RUN pip3 install bbknn==1.5.1 # download BBKNN
+RUN python3.8 -m pip install bbknn==1.5.1 # download BBKNN
 # RUN pip3 install mnnpy # download MNN
 # RUN pip3 install desc # download DESC 
-RUN pip3 install scanorama==1.7.1 # download Scanorama
+RUN python3.8 -m pip install scanorama==1.7.1 # download Scanorama
