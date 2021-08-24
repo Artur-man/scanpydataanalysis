@@ -48,7 +48,7 @@ RUN pip3 install leidenalg # download Leiden Algorithm
 # RUN pip3 install --use-feature=2020-resolver git+https://github.com/theislab/scib.git
 
 # Download Additional batch correction algorithm modules
-# RUN pip3 install bbknn # download BBKNN
+RUN pip3 install bbknn # download BBKNN
 # RUN pip3 install mnnpy # download MNN
 # RUN pip3 install desc # download DESC 
-# RUN pip3 install scanorama # download Scanorama
+RUN pip3 install scanorama # download Scanorama
