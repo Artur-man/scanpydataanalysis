@@ -23,7 +23,7 @@ RUN wget \
     && rm -f Miniconda3-latest-Linux-x86_64.sh 
 COPY environment.yml /
 RUN conda env create -f /environment.yml && conda clean -a
-RUN conda install python=3.8.8
+RUN conda install python=3.8.5
 
 # conda install r-base
 # RUN conda install r-base 
