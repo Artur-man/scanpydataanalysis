@@ -54,3 +54,4 @@ RUN python3.7 -m pip install bbknn==1.3.9 # download BBKNN
 # RUN pip3 install mnnpy # download MNN
 # RUN pip3 install desc # download DESC 
 # RUN python3.8 -m pip install scanorama==1.7.1 # download Scanorama
+RUN python3.7 -m pip install cellphonedb==3.1.0
