@@ -46,7 +46,7 @@ RUN apt-get -y install libfontconfig1-dev libcairo2-dev
 # Install scanpy and leidenalg
 RUN python3.7 -m pip install scanpy==1.4.6
 # RUN python3.7 -m pip install leidenalg # download Leiden Algorithm
-RUN python3.7 -m pip install louvain==0.6.1
+RUN python3.7 -m pip install louvain
 # RUN pip3 install --use-feature=2020-resolver git+https://github.com/theislab/scib.git
 
 # Download Additional batch correction algorithm modules
